@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Marquee</title>
-    <script type="text/javascript" src="../assets/js/jquery.js"></script>
-    <script type="text/javascript" src="../assets/js/acmeticker.js"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/jquery.js" type="text/javascript"></script>
+    <script src="../assets/js/acmeticker.js" type="text/javascript"></script>
+    <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-
 
 
 <div class="acme-news-ticker">
@@ -31,13 +30,13 @@
     <div class="acme-news-ticker-controls acme-news-ticker-horizontal-controls">
         <button class="acme-news-ticker-pause"></button>
     </div>
-</div>   
+</div>
 
 
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         $('.my-news-ticker').AcmeTicker({
-            type:'marquee',/*horizontal/horizontal/Marquee/type*/
+            type: 'marquee',/*horizontal/horizontal/Marquee/type*/
             direction: 'right',/*up/down/left/right*/
             speed: 0.05,/*true/false/number*/ /*For vertical/horizontal 600*//*For marquee 0.05*//*For typewriter 50*/
             controls: {

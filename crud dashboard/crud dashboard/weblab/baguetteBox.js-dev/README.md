@@ -19,18 +19,18 @@ Simple and easy to use lightbox script written in pure JavaScript.
 
 ## Table of contents
 
-  * [Features](#features)
-  * [Installation](#installation)
-  * [Importing](#importing)
-  * [Usage](#usage)
-  * [Customization](#customization)
-  * [API](#api)
-  * [Responsive images](#responsive-images)
-  * [Compatibility](#compatibility)
-  * [Contributing](#contributing)
-  * [Donation](#donation)
-  * [Credits](#credits)
-  * [License](#license)
+* [Features](#features)
+* [Installation](#installation)
+* [Importing](#importing)
+* [Usage](#usage)
+* [Customization](#customization)
+* [API](#api)
+* [Responsive images](#responsive-images)
+* [Compatibility](#compatibility)
+* [Contributing](#contributing)
+* [Donation](#donation)
+* [Credits](#credits)
+* [License](#license)
 
 ## Features
 
@@ -57,6 +57,7 @@ npm install baguettebox.js --save
 ```
 
 ### Yarn
+
 ```sh
 yarn add baguettebox.js
 ```
@@ -68,9 +69,11 @@ bower install baguettebox.js --save
 ```
 
 ### CDN
+
 1. Use one of the following CDN providers:
-  - https://cdnjs.com/libraries/baguettebox.js
-  - https://jsdelivr.com/projects/baguettebox.js
+
+- https://cdnjs.com/libraries/baguettebox.js
+- https://jsdelivr.com/projects/baguettebox.js
 
 3. Copy URLs of the latest version (both `.js` and `.css` files)
 
@@ -95,7 +98,8 @@ bower install baguettebox.js --save
 
 ### Traditional approach
 
-If you don't use JavaScript modules and include the file with a `<script>` tag, you don't have to import anything explicitly. `baguetteBox` will be available in the global scope.
+If you don't use JavaScript modules and include the file with a `<script>` tag, you don't have to import anything
+explicitly. `baguetteBox` will be available in the global scope.
 
 ### CommonJS
 
@@ -123,7 +127,8 @@ Initialize the script by running:
 baguetteBox.run('.gallery');
 ```
 
-where the first argument is a selector to a gallery (or galleries) containing `a` tags. The HTML code may look like this:
+where the first argument is a selector to a gallery (or galleries) containing `a` tags. The HTML code may look like
+this:
 
 ```html
 <div class="gallery">
@@ -161,23 +166,23 @@ baguetteBox.run('.gallery', {
 
 The following options are available:
 
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `captions` | `Boolean` \| `function(element)` | `true` | Display image captions. Passing a function will use a string returned by this callback. The only argument is `a` element containing the image. Invoked in the context of the current gallery array |
-| `buttons` | `Boolean` \| `'auto'` | `'auto'` | Display buttons. `'auto'` hides buttons on touch-enabled devices or when only one image is available |
-| `fullScreen` | `Boolean` | `false` | Enable full screen mode |
-| `noScrollbars` | `Boolean` | `false` | Hide scrollbars when gallery is displayed |
-| `bodyClass` | `String` | `'baguetteBox-open'` | Class name that will be appended to the `body` when lightbox is visible (works in IE 10+) |
-| `ignoreClass` | `String` | `null` | It will ignore images with given class put on `a` tag |
-| `titleTag` | `Boolean` | `false` | Use caption value also in the gallery `img.title` attribute |
-| `async` | `Boolean` | `false` | Load files asynchronously |
-| `preload` | `Number` | `2` | How many files should be preloaded |
-| `animation` | `'slideIn'` \| `'fadeIn'` \| `false` | `'slideIn'` | Animation type |
-| `afterShow` | `function` | `null` | Callback to be run after showing the overlay |
-| `afterHide` | `function` | `null` | Callback to be run after hiding the overlay |
-| `onChange` | `function(currentIndex, imagesCount)` | `null` | Callback to be run when image changes |
-| `overlayBackgroundColor` | `String` | `'rgba`<br>`(0,0,0,0.8)'` | Background color for the lightbox overlay |
-| `filter` | `RegExp` | `/.+\.(gif\|jpe?g\|png\|webp)/i` | Pattern to match image files. Applied to the `a.href` attribute |
+| Option                   | Type                                  | Default                          | Description                                                                                                                                                                                        |
+|--------------------------|---------------------------------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `captions`               | `Boolean` \| `function(element)`      | `true`                           | Display image captions. Passing a function will use a string returned by this callback. The only argument is `a` element containing the image. Invoked in the context of the current gallery array |
+| `buttons`                | `Boolean` \| `'auto'`                 | `'auto'`                         | Display buttons. `'auto'` hides buttons on touch-enabled devices or when only one image is available                                                                                               |
+| `fullScreen`             | `Boolean`                             | `false`                          | Enable full screen mode                                                                                                                                                                            |
+| `noScrollbars`           | `Boolean`                             | `false`                          | Hide scrollbars when gallery is displayed                                                                                                                                                          |
+| `bodyClass`              | `String`                              | `'baguetteBox-open'`             | Class name that will be appended to the `body` when lightbox is visible (works in IE 10+)                                                                                                          |
+| `ignoreClass`            | `String`                              | `null`                           | It will ignore images with given class put on `a` tag                                                                                                                                              |
+| `titleTag`               | `Boolean`                             | `false`                          | Use caption value also in the gallery `img.title` attribute                                                                                                                                        |
+| `async`                  | `Boolean`                             | `false`                          | Load files asynchronously                                                                                                                                                                          |
+| `preload`                | `Number`                              | `2`                              | How many files should be preloaded                                                                                                                                                                 |
+| `animation`              | `'slideIn'` \| `'fadeIn'` \| `false`  | `'slideIn'`                      | Animation type                                                                                                                                                                                     |
+| `afterShow`              | `function`                            | `null`                           | Callback to be run after showing the overlay                                                                                                                                                       |
+| `afterHide`              | `function`                            | `null`                           | Callback to be run after hiding the overlay                                                                                                                                                        |
+| `onChange`               | `function(currentIndex, imagesCount)` | `null`                           | Callback to be run when image changes                                                                                                                                                              |
+| `overlayBackgroundColor` | `String`                              | `'rgba`<br>`(0,0,0,0.8)'`        | Background color for the lightbox overlay                                                                                                                                                          |
+| `filter`                 | `RegExp`                              | `/.+\.(gif\|jpe?g\|png\|webp)/i` | Pattern to match image files. Applied to the `a.href` attribute                                                                                                                                    |
 
 ## API
 
@@ -226,7 +231,9 @@ Remove the plugin with any event bindings
 
 ## Responsive images
 
-To use this feature, simply put `data-at-{width}` attributes on `a` tags with a value being the path to the desired image. `{width}` should be the maximum screen width the image can be displayed at. The script chooses the first image with `{width}` greater than or equal to the current screen width for best user experience.
+To use this feature, simply put `data-at-{width}` attributes on `a` tags with a value being the path to the desired
+image. `{width}` should be the maximum screen width the image can be displayed at. The script chooses the first image
+with `{width}` greater than or equal to the current screen width for best user experience.
 That last `data-at-X` image is also used in the case of a screen larger than X.
 
 Here's an example of what the HTML code can look like:
@@ -241,11 +248,14 @@ Here's an example of what the HTML code can look like:
 </a>
 ```
 
-If you have 1366x768 resolution baguetteBox.js will choose `"img/medium/2-1.jpg"`. If, however, it's 1440x900 it'll choose `"img/big/2-1.jpg"`. Keep the `href` attribute as a fallback (link to a bigger image e.g. of HD size) for older browsers.
+If you have 1366x768 resolution baguetteBox.js will choose `"img/medium/2-1.jpg"`. If, however, it's 1440x900 it'll
+choose `"img/big/2-1.jpg"`. Keep the `href` attribute as a fallback (link to a bigger image e.g. of HD size) for older
+browsers.
 
 ## Compatibility
 
 Desktop:
+
 * IE 8+
 * Chrome
 * Firefox 3.6+
@@ -253,12 +263,14 @@ Desktop:
 * Safari 5+
 
 Mobile:
+
 * Safari on iOS
 * Chrome on Android
 
 ## Contributing
 
-Feel free to report any issues! If you wish to contribute by fixing a bug or implementing a new feature, please first read the [CONTRIBUTING](./CONTRIBUTING.md) guide.
+Feel free to report any issues! If you wish to contribute by fixing a bug or implementing a new feature, please first
+read the [CONTRIBUTING](./CONTRIBUTING.md) guide.
 
 ## Donation
 
@@ -268,9 +280,11 @@ If you find this project useful and want to say thanks, you can buy me a cup of 
 
 ## Credits
 
-Creation of `baguetteBox.js` was inspired by a great jQuery plugin [touchTouch](https://github.com/martinaglv/touchTouch).
+Creation of `baguetteBox.js` was inspired by a great jQuery
+plugin [touchTouch](https://github.com/martinaglv/touchTouch).
 
-Huge thanks for providing a testing platform go to [![BrowserStack](https://i.imgur.com/rlVVZwG.png)](http://browserstack.com/)
+Huge thanks for providing a testing platform go
+to [![BrowserStack](https://i.imgur.com/rlVVZwG.png)](http://browserstack.com/)
 
 ## License
 

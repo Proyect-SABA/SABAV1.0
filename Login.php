@@ -22,14 +22,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif ($perfil === "Instructor") {
         $sql = "SELECT insRol FROM tblinstructores WHERE insDocumento = ? AND insContrasena = ?";
     } elseif ($perfil === "Administrador") {
-        $sql = "SELECT admRol FROM tbladministradores WHERE admDocumento = ? AND admContrasena = ?";
+        $sql = "SELECT admRol FROM tbladministracion WHERE admDocumento = ? AND admContrasena = ?";
     } elseif ($perfil === "Psicologo") {
-        $sql = "SELECT psiRol FROM tblpsicologos WHERE psiDocumento = ? AND psiContrasena = ?";
+        $sql = "SELECT pscRol FROM tblpsicologos WHERE pscDocumento = ? AND pscContrasena = ?";
     } else {
         $error = "Perfil no válido";
     }
-    if (isset($sql)) {
 
+    if (isset($sql)) {
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ss", $username, $password);
         $stmt->execute();
@@ -40,7 +40,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['txtusuario'] = $username;
             $_SESSION['txtcontrasena'] = $password;
             $_SESSION['perfil'] = $perfil;
-            header("Location: index.html");
+
+
+            switch ($perfil) {
+                case "Aprendiz":
+                    header("Location: aprendiz/aprendiz.php");
+                    break;
+                case "Instructor":
+                    header("Location: instructor/inst.php");
+                    break;
+                case "Administrador":
+                    header("Location: administrador/admin.php");
+                    break;
+                case "Psicologo":
+                    header("Location: psicologo/psicologo.php");
+                    break;
+                default:
+                    $error = "Perfil no válido";
+                    break;
+            }
         } else {
             $error = "Credenciales incorrectas";
         }
@@ -60,7 +78,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login Form</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
 <div class="wrapper">

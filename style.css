@@ -1,47 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?");
 
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
 
 }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-image: url('./backgrounnd.jpg');
-    background-size:cover ;
+    background-size: cover;
     background-position: center;
-    
+
 }
+
 .background.image {
     background-image: url('logosena.png');
-    
+
 }
-.wrapper{
+
+.wrapper {
 
     width: 420px;
     background-color: transparent;
-    border: 2px solid rgba(255,255, 255, .2);
-    backdrop-filter: blur(20px) ;
-    box-shadow: 0  0  10px rgba(0, 0, 0, .2);
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     color: white;
     border-radius: 10px;
     padding: 30px 40px;
 
 }
 
-.wrapper h1{
+.wrapper h1 {
     font-size: 36px;
     text-align: center;
 
 
 }
 
-.wrapper .profile{
+.wrapper .profile {
 
     width: 100%;
     height: 50px;
@@ -49,19 +52,20 @@ body {
 
 }
 
-::placeholder{
+::placeholder {
     color: white;
 }
-.wrapper .input-box{
 
-position: relative;
+.wrapper .input-box {
+
+    position: relative;
     width: 100%;
     height: 50px;
     color: white;
     margin: 30px 0;
 }
 
-.profile input{
+.profile input {
 
     width: 100%;
     height: 100%;
@@ -71,7 +75,7 @@ position: relative;
     border: 2px solid;
 }
 
-.input-box input{
+.input-box input {
 
     width: 100%;
     height: 100%;
@@ -82,12 +86,13 @@ position: relative;
     border-radius: 40px;
     font-size: 16px;
     color: white;
-    padding: 20px 45px  20px  20px;
+    padding: 20px 45px 20px 20px;
 
 
 }
-.profile select{
-    
+
+.profile select {
+
 
     width: 100%;
     height: 50px;
@@ -101,7 +106,7 @@ position: relative;
     padding: 10px 10px 10px 10px;
 }
 
-.input-box input ::placeholder{
+.input-box input ::placeholder {
 
     color: white;
 
@@ -111,8 +116,8 @@ position: relative;
     color: white;
 
 }
- 
-.input-box i{
+
+.input-box i {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -121,7 +126,7 @@ position: relative;
 
 }
 
-.wrapper .remember-forgot{
+.wrapper .remember-forgot {
 
     display: flex;
     justify-content: space-between;
@@ -129,7 +134,7 @@ position: relative;
     margin: -15px 0 15px;
 }
 
-.remember-forgot label input{
+.remember-forgot label input {
     accent-color: white;
     margin-right: 3px;
 }
@@ -139,24 +144,25 @@ position: relative;
     text-decoration: none;
 }
 
-.remember-forgot a:hover{
+.remember-forgot a:hover {
     text-decoration: underline;
 }
-.wrapper .btn{
+
+.wrapper .btn {
     width: 100%;
     height: 45px;
     background-color: white;
-    border:none;
+    border: none;
     outline: none;
     border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     cursor: pointer;
     font-size: 16px;
     color: #333;
-    font-weight: 600; 
+    font-weight: 600;
 }
 
-.wrapper .register-link{
+.wrapper .register-link {
 
     font-size: 15.5px;
     text-align: center;
@@ -164,36 +170,41 @@ position: relative;
 
 }
 
-.register-link p a{
+.register-link p a {
 
     color: white;
     text-decoration: none;
     font-weight: 600;
 }
-.register-link p a:hover{
+
+.register-link p a:hover {
     text-decoration: underline;
 }
 
 
-.profile .select{
+.profile .select {
 
     width: 200px;
-    
+
 }
-option:nth-child(odd){
+
+option:nth-child(odd) {
     background-color: transparent;
     color: black;
 }
-    option:nth-child(even){
-        background-color: transparent;
-        color: black;
-}
-select{
 
-    border: 2px solid rgba(255,255, 255, .2);
-    
-   
+option:nth-child(even) {
+    background-color: transparent;
+    color: black;
 }
+
+select {
+
+    border: 2px solid rgba(255, 255, 255, .2);
+
+
+}
+
 .contenedor {
     background-image: url ('./logoSena.png');
 }
