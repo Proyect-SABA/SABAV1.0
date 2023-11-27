@@ -56,9 +56,7 @@
 
   <script src="../js/jquery-3.0.0.min.js"></script>
   <script src="../js/popper.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-
-  <script src="../js/jquery-3.0.0.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/moment.min.js"></script>
@@ -182,10 +180,6 @@
     });
   </script>
 
-
-  <!--------- WEB DEVELOPER ------>
-  <!--------- URIAN VIERA   ----------->
-  <!--------- PORTAFOLIO:  https://blogangular-c7858.web.app  -------->
 
 </body>
 

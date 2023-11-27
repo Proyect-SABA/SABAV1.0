@@ -1,3 +1,29 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Función JavaScript para obtener el ID del último evento registrado mediante AJAX
+        function obtenerIdUltimoEvento() {
+            const xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('eventoId').value = JSON.parse(xhr.responseText).id;
+                }
+            };
+
+            xhr.open("GET", "eventoid.php", true);
+            xhr.send();
+        }
+
+        // Actualizar el campo oculto con el ID del evento al enviar el formulario
+        document.getElementById('formEvento').addEventListener('submit', function (event) {
+            event.preventDefault();
+            obtenerIdUltimoEvento();
+            this.submit();
+        });
+    });
+</script>
+
+
 <div class="modal" id="exampleModal"  tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -8,7 +34,26 @@
         </button>
       </div>
   <form name="formEvento" id="formEvento" action="nuevoEvento.php" class="form-horizontal" method="POST">
-		<div class="form-group">
+      <input type="hidden" name="adminEmail" id="adminEmail" value ="<?php function obtenerEmailAdministradorDesdeBD()
+      {
+            global $conn;
+    $query = "SELECT admcorreo FROM tbladministracion";
+    $result = mysqli_query($conn, $query);
+
+    if ($result && $row = mysqli_fetch_assoc($result)) {
+        return $row['admcorreo'];
+    }
+
+    // Si no se pudo obtener el correo, puedes devolver un valor por defecto o manejar el caso según tus necesidades.
+    return 'correo_por_defecto@example.com';
+
+
+      }
+
+      echo obtenerEmailAdministradorDesdeBD(); ?>">
+
+      <input type="hidden" id="eventoId" name="eventoId" value="">
+      <div class="form-group">
 			<label for="evento" class="col-sm-12 control-label">Nombre del Evento</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" name="evento" id="evento" placeholder="Nombre del Evento" required/>

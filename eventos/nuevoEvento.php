@@ -1,4 +1,5 @@
 <?php
+global $conn;
 date_default_timezone_set("America/Bogota");
 setlocale(LC_ALL,"es_ES");
 //$hora = date("g:i:A");
@@ -27,8 +28,25 @@ $InsertNuevoEvento = "INSERT INTO eventoscalendar(
       '" .$fecha_fin. "',
       '" .$color_evento. "'
   )";
-$resultadoNuevoEvento = mysqli_query($con, $InsertNuevoEvento);
+
+$resultadoNuevoEvento = mysqli_query($conn, $InsertNuevoEvento);
 
 header("Location:index.php?e=1");
 
-?>
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Obtener los datos del formulario
+    $evento = $_POST['evento'];
+    $fechaInicio = $_POST['fecha_inicio'];
+    $fechaFin = $_POST['fecha_fin'];
+    $colorEvento = $_POST['color_evento'];
+    $adminEmail = $_POST['adminEmail'];
+
+    // Insertar el evento en la base de datos (tu código existente)
+
+    // Enviar correo al administrador
+    $toAdmin = $adminEmail;
+    $subjectAdmin = "Nuevo Evento Pendiente de Validación";
+    $messageAdmin = "Se ha registrado un nuevo evento que requiere validación. Por favor, valida el evento.";
+    mail($toAdmin, $subjectAdmin, $messageAdmin);
+
+}

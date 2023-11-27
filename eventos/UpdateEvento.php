@@ -1,4 +1,5 @@
 <?php
+global $conn;
 date_default_timezone_set("America/Bogota");
 setlocale(LC_ALL,"es_ES");
 
@@ -22,7 +23,6 @@ $UpdateProd = ("UPDATE eventoscalendar
         fecha_fin ='$fecha_fin',
         color_evento ='$color_evento'
     WHERE id='".$idEvento."' ");
-$result = mysqli_query($con, $UpdateProd);
+$result = mysqli_query($conn, $UpdateProd);
 
 header("Location:index.php?ea=1");
-?>
