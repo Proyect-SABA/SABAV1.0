@@ -86,26 +86,7 @@
 
             <li class="dropdown">
                 <a href="../eventos/index.php">
-                    <i class="material-icons">event</i>Event
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    os
+                    <i class="material-icons">event</i>Eventos
                 </a>
             </li>
 

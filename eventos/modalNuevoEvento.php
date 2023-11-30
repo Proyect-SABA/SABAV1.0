@@ -34,23 +34,7 @@
         </button>
       </div>
   <form name="formEvento" id="formEvento" action="nuevoEvento.php" class="form-horizontal" method="POST">
-      <input type="hidden" name="adminEmail" id="adminEmail" value ="<?php function obtenerEmailAdministradorDesdeBD()
-      {
-            global $conn;
-    $query = "SELECT admcorreo FROM tbladministracion";
-    $result = mysqli_query($conn, $query);
-
-    if ($result && $row = mysqli_fetch_assoc($result)) {
-        return $row['admcorreo'];
-    }
-
-    // Si no se pudo obtener el correo, puedes devolver un valor por defecto o manejar el caso según tus necesidades.
-    return 'correo_por_defecto@example.com';
-
-
-      }
-
-      echo obtenerEmailAdministradorDesdeBD(); ?>">
+      <input type="hidden" name="adminEmail" id="adminEmail" value ="xsebastiansanchez11.5@gmail.com">
 
       <input type="hidden" id="eventoId" name="eventoId" value="">
       <div class="form-group">
