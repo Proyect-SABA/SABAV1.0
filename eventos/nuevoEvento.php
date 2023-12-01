@@ -60,7 +60,7 @@ try {
     // Configuración del correo
     $mail->setFrom('mfurquina2004@gmail.com', 'Manuel Urquina');
     $mail->Subject = "Solicitud de Validación para Evento";
-    $mail->Body = "Se ha registrado un nuevo evento. Por favor, valide el evento haciendo clic en el siguiente enlace: https://localhost/validar_evento.php?id={$ultimoEventoId['id']}";
+    $mail->Body = "Se ha registrado un nuevo evento. Por favor, valide el evento";
 
     // Enviar el correo
     //$to = 'mfurquina2004@gmail.com';

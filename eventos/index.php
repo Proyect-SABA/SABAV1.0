@@ -2,8 +2,8 @@
 <html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-32">
+  <meta http-equiv="x-ua-compatible" content="IE=chrome">
   <title>Mi Calendario</title>
 
     <link rel="stylesheet" type="text/css" href="../css/fullcalendar.min.css">

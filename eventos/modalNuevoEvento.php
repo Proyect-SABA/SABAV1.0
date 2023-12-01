@@ -34,7 +34,7 @@
         </button>
       </div>
   <form name="formEvento" id="formEvento" action="nuevoEvento.php" class="form-horizontal" method="POST">
-      <input type="hidden" name="adminEmail" id="adminEmail" value ="xsebastiansanchez11.5@gmail.com">
+      <input type="hidden" name="adminEmail" id="adminEmail" >
 
       <input type="hidden" id="eventoId" name="eventoId" value="">
       <div class="form-group">

@@ -43,12 +43,13 @@ function enviarCorreoAdministrador($adminEmail, $ultimoEventoId): void
         // Configuración del correo
         $mail->setFrom('mfurquina2004@gmail.com', 'Manuel Urquina');
         $mail->addAddress($adminEmail);
-        $mail->Subject = "Solicitud de Validación para Evento";
-        $mail->Body = "Se ha registrado un nuevo evento. Por favor, valide el evento haciendo clic en el siguiente enlace: https://localhost/validar_evento.php?id={$ultimoEventoId['id']}";
+        $mail->Subject = "Solicitud de Validacion para Evento";
+        $mail->Body = "Se ha registrado un nuevo evento. Por favor, valide el evento ";
 
         // Enviar el correo
         //$to = 'mfurquina2004@gmail.com';
-        //$subject = 'Prueba de correo';
+        //$subject = 'Prueba de correo';+
+
         //$message = 'Este es un mensaje de prueba.';
         //$headers = 'From: tu_correo@gmail.com';
 
